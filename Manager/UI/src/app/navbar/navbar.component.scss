@@ -1,0 +1,35 @@
+:host {
+    width: 100%;
+    background-color: var(--color-5);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+
+    button {
+        margin-left: auto;
+        transition: color .3s;
+
+        &:active {
+            color: #FFF;
+        }
+    }
+
+    a {
+        margin-right: 3rem;
+        padding: .3rem .9rem;
+        border-radius: 5px;
+        transition: all .5s;
+
+        &:active {
+            background-color: var(--color-3);
+        }
+
+        &.active {
+            color: var(--color-1);
+            background: linear-gradient(120deg, var(--color-4), var(--color-3));
+        }
+    }
+}

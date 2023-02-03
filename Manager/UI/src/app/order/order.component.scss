@@ -1,0 +1,47 @@
+:host {
+    background-color: var(--color-2);
+    max-width: 18rem;
+    color: var(--color-1);
+    border-radius: 10px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    img {
+        background-color: #838383;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    select {
+        margin: 0.5rem 0;
+        background: #e7e7e7;
+        padding: .5rem;
+        border-radius: 5px;
+    }
+
+    .user {
+        margin-top: auto;
+    }
+
+    .comment {
+        margin-bottom: .8rem;
+    }
+
+    h2 {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    :host {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,85 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+
+:root {
+    --color-1: #060606;
+    --color-2: #FFFFFF;
+    --color-3: #FDC913;
+    --color-4: #F8B9B6;
+    --color-5: #131313;
+}
+
+html {
+    user-select: none;
+    background-color: var(--color-1);
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', monospace;
+
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+section {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+button {
+    background: var(--color-3);
+    color: #000;
+    border-radius: 5px;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 1024px) {
+    section {
+        width: 90vw;
+    }
+}

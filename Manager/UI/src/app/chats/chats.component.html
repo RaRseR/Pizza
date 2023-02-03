@@ -1,0 +1,13 @@
+<div class="chats">
+  <a
+    *ngFor="let chat of chats"
+    class="button"
+    routerLink="{{ chat.id }}"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    >{{ chat.user }}</a
+  >
+</div>
+<div class="chat">
+  <router-outlet></router-outlet>
+</div>

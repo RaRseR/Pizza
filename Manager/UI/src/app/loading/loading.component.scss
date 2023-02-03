@@ -1,0 +1,13 @@
+#piece {
+    animation: .9s loading infinite alternate linear;
+}
+
+@keyframes loading {
+    from {
+        transform: translateX(0%) translateY(0%);
+    }
+
+    to {
+        transform: translateX(5%) translateY(-10%);
+    }
+}

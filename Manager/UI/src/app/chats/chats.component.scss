@@ -1,0 +1,46 @@
+:host {
+    display: flex;
+    border-radius: 0 0 15px 15px;
+    background-color: #0a0a0a;
+    height: 80vh;
+
+    .chats {
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #0a0a0a;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--color-3);
+        }
+
+        a {
+            background-color: var(--color-4);
+            padding: .4rem;
+            color: #0a0a0a;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all .3s;
+            margin-bottom: .8rem;
+
+            &.active {
+                filter: brightness(1.2);
+            }
+        }
+
+        width: 20%;
+        padding: 1rem .8rem 1rem 1rem;
+
+        border-right: 1px solid #646464;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chat {
+        width: 80%;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,53 @@
+<h2>{{ _id }}</h2>
+<select
+  (ngModelChange)="changeStatus($event)"
+  [(ngModel)]="status"
+  name="status"
+>
+  <option [ngValue]="0" [selected]="status === 0" [disabled]="status > 0">
+    Принято
+  </option>
+  <option [ngValue]="1" [selected]="status === 1" [disabled]="status > 1">
+    Готовится
+  </option>
+  <option [ngValue]="2" [selected]="status === 2" [disabled]="status > 2">
+    В доставке
+  </option>
+  <option [ngValue]="3" [selected]="status === 3" [disabled]="status > 3">
+    Доставлено
+  </option>
+  <option [ngValue]="4" [selected]="status === 4" [disabled]="status === 3">
+    Отменено
+  </option>
+</select>
+<div class="row">
+  <span>Вид пиццы: </span><span>{{ title }}</span>
+</div>
+<div class="row">
+  <span>Размер: </span><span>{{ size }}</span>
+</div>
+<div class="row">
+  <span>Тесто: </span><span>{{ dough }}</span>
+</div>
+<div class="row">
+  <span>Бортик: </span><span>{{ border }}</span>
+</div>
+<div class="row">
+  <span>Адрес: </span><span>{{ address }}</span>
+</div>
+<div class="row" *ngIf="supplements != undefined">
+  <span>Добавки: </span><span> {{ supplements }}</span>
+</div>
+<div class="comment" *ngIf="comment != undefined">
+  <p>Комментарий:</p>
+  <p>{{ comment }}</p>
+</div>
+<div class="row user">
+  <img
+    src="https://ca.slack-edge.com/{{ user.team_id }}-{{
+      user.id
+    }}-g9eb9729ba32-48"
+    alt=""
+  />
+  <h3>{{ user.name }}</h3>
+</div>

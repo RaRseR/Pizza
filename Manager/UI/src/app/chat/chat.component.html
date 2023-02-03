@@ -1,0 +1,13 @@
+<div class="messages">
+  <div
+    *ngFor="let message of messages"
+    [ngClass]="message.from ? 'message from' : 'message'"
+  >
+    {{ message.text }}
+  </div>
+</div>
+
+<form (ngSubmit)="sendMessage()" class="send">
+  <input [(ngModel)]="newMessage" />
+  <button type="submit">Отправить</button>
+</form>
