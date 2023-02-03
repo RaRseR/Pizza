@@ -97,9 +97,6 @@ async function makeOrder(order: IOrder) {
     const channel2 = await conn.createChannel();
 
     channel.sendToQueue(queue, Buffer.from(JSON.stringify(order)));
-
-    const message = { user: order.user.id, text: "TEST" };
-    channel2.sendToQueue("chat", Buffer.from(JSON.stringify(message)));
 }
 
 (async () => {
